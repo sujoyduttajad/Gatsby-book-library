@@ -1,20 +1,4 @@
 node_modules/
 .cache/
 public
-
-# dependencies
-/.pnp
-.pnp.js
-lib/
-# testing
-/coverage
-
-# production
-/build
-
-# misc
-.DS_Store
 .env
-.env.development.local
-.env.test.local
-.env.production.local
