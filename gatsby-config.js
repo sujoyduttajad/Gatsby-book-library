@@ -1,5 +1,5 @@
 require('dotenv').config();
-
+console.log("URL here", process.env.HARPER_DB_URL)
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
@@ -25,7 +25,7 @@ module.exports = {
           "operation": "sql",
           "sql":"SELECT * FROM library.book"
         },
-        type: "books"
+        type: "book"
       },
     },
   ],
