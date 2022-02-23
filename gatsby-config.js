@@ -1,20 +1,32 @@
 require('dotenv').config();
-console.log("URL here", process.env.HARPER_DB_URL)
+
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "book-library",
   },
   plugins: [
-    "gatsby-plugin-sass",
     "gatsby-plugin-mdx",
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-gatsby-cloud",
+    "gatsby-plugin-image",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/images/icon.png",
+      },
+    },
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: "images",
+        path: "./src/images/",
       },
-      __key: "pages",
+      __key: "images",
     },
     {
       resolve: `gatsby-source-harperdb`,
